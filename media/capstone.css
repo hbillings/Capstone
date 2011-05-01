@@ -1,0 +1,222 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end reset */
+
+/* Common */
+
+body {
+    background: url('images/cap_background.jpg') no-repeat fixed;
+    font-family: 'Vollkorn', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Slab', serif;
+    text-transform: lowercase;
+}
+
+h2 {
+    font-size: 2em;
+    color: #FCFEBF;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+header {
+    margin: 20px;
+}
+
+header h1 {
+    bottom: 0;
+    font-size: 4.5em;
+    color: #fff;
+        vertical-align: bottom;
+}
+
+header h3 {
+    font-family: 'Vollkorn', serif;
+    font-size: .9em;
+    color: #fcfebf;
+    margin: 25px 10px 15px 0px;
+    float: left;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: -50;
+    padding: 10px;
+    height: 100px;
+    clear: both;
+}
+
+footer ul {
+    width: 50%;
+    margin: auto;
+    clear: both;
+}
+
+footer li {
+    display: block;
+    background: #eee;
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+    float: left;
+}
+
+/* intro page */
+
+#splash {
+    position: absolute;
+    top: 100px;
+    padding: 40px;
+}
+
+#splash h1 {
+    font-size: 7em;
+    color: #fff;
+    }
+
+#splash h3 {
+    font-family: 'Vollkorn', serif;
+    font-size: 1em;
+    color: #fcfebf;
+    line-height: 115%;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+#snooze_button {
+    position: relative;
+    top: 0px;
+    left: 550px;
+}
+
+#snooze_button a {
+    font-family: 'Vollkorn', serif;
+    font-size: 1.3em;
+    color: #545B8F;
+    font-weight: 600;
+}
+
+/* Semester Detail Pages */
+
+li.hidden {
+    display:none;
+}
+
+#time {
+    width: 200px;
+    text-align: center;
+    margin: 40px auto 20px auto;
+}
+
+
+/* timeline code from CSS Wizardry: http://twitter.com/csswizardry */
+
+#timeline{
+	background:url('http://dummyimage.com/3/FCFEBF/FCFEBF.gif') top center repeat-y;
+	width:820px;
+	padding:10px 0px 10px 0px;
+	margin:0 auto 50px auto;
+	overflow:hidden;
+	list-style:none;
+	position:relative;
+}
+
+#timeline li{
+	position:relative;
+	clear:both;
+	float:left;
+	width:275px;
+	padding:10px;
+	background:#eee;
+	border:1px solid #FCFEBF;
+	text-align:right;
+	margin:0 0 10px 0;
+	
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	-moz-box-shadow:0 1px #fff inset;
+	-webkit-box-shadow:0 1px #fff inset;
+	box-shadow:0 1px #fff inset;
+}
+
+#timeline li:before,
+#timeline li:after{
+	content:" ";
+	width:70px;
+	height:3px;
+	background:#f43059;
+	position:absolute;
+	left:100%;
+	top:50%;
+	background:-moz-linear-gradient(0,#FCFEBF,#FCFEBF);
+	background:-webkit-gradient(linear,left top,right top,from(#FCFEBF),to(#E36651));
+}
+
+ #timeline li:nth-of-type(odd),
+#timeline li:nth-of-type(even){
+	margin:-10px 0 0 0;
+}
+#timeline li:nth-of-type(even){
+	float:right;
+	text-align:left;
+}
+#timeline li:nth-of-type(even):after{
+	background:-moz-linear-gradient(0,#FCFEBF,#FCFEBF);
+	background:-webkit-gradient(linear,left top,right top,from(#E36651),to(#FCFEBF));
+	left:auto;
+	right:100%;
+}

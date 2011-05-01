@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Waiting for Dawn | Heather Billings</title>
+        <link rel="stylesheet" href="/files/capstone.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="/files/js/jqplot/jquery.jqplot.css" />
+		<link rel="stylesheet" type="text/css" href="/files/js/jqplot/examples/examples.css" />
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Josefin+Slab|Vollkorn">
+		
+		<script src="/files/js/jquery-1.5.js" type="text/javascript" charset="utf-8"></script>
+		<script language="javascript" type="text/javascript" src="/files/js/jqplot/jquery.jqplot.js"></script>
+		<script language="javascript" type="text/javascript" src="/files/js/jqplot/plugins/jqplot.dateAxisRenderer.js"></script>
+		<script language="javascript" type="text/javascript" src="/files/js/jqplot/plugins/jqplot.highlighter.js"></script>
+		<script language="javascript" type="text/javascript" src="/files/js/jqplot/plugins/jqplot.cursor.js"></script>
+		
+		<script language="javascript" type="text/javascript">
+
+		function editit(str, si, pi, plot) {
+		    return "<b><i>NHT: "+plot.targetId+', Series: '+si+', Point: '+pi+', '+str+"</b></i>";
+		}
+
+		$(document).ready(function(){
+		      $.jqplot.config.enablePlugins = true;
+		   s1 = [['25-Aug-2009',1],['12-Jan-2010',1.5],['1-June-2010',2],['25-Aug-2010',3],['12-Jan-2011',2],];
+
+		   plot1 = $.jqplot('chart1',[s1],{
+		       axes: {
+		           xaxis: {
+						renderer: $.jqplot.DateAxisRenderer,
+		               tickOptions: {
+		                   formatString: '%b %#d, %Y'
+		               },
+		               numberTicks: 5
+		           },
+		           yaxis: {
+		               tickOptions: {
+		                   show: false,
+		               }
+		           },
+		       },	
+				
+				grid: {
+					background: 'transparent',
+					borderColor: 'transparent',
+				},
+				
+		       highlighter: {
+		           sizeAdjust: 10,
+		           tooltipLocation: 'n',
+		           useAxesFormatters: false,
+		           formatString: 'Hello %s dayglow %d',
+		           tooltipContentEditor: editit,
+		       },
+		
+		       cursor: {
+		           show: true,
+		           zoom: true
+		       },
+		   });
+
+		});
+
+		</script>
+	</head>
+	<body>
+		<section id="splash">
+			{% block intro %}
+			{% endblock %}
+		</section>
+		<header>
+			{% block head %}
+			{% endblock %}
+		</header>
+		<section id="content">
+			{% block content %}
+			{% endblock %}
+		</section>
+		<footer>
+			{% for semester in semesters %}
+				<a href="{{ semester.get_absolute_url }}">{{ semester }}</a>
+			{% endfor %}
+			{% block menu %}
+			{% endblock %}
+		</footer>
+	</body>
+</html>
