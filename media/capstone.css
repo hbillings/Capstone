@@ -53,7 +53,7 @@ table {
 
 body {
     background: url('images/cap_background.jpg') no-repeat fixed;
-    font-family: 'Vollkorn', serif;
+    font-family: 'Vollkorn', serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
     font-size: 2em;
-    color: #FCFEBF;
+    color: #E36651;
     font-weight: bold;
 }
 
@@ -73,21 +73,28 @@ h3 {
 
 header {
     margin: 20px;
+    position: relative;
+    height: 100px;
 }
 
 header h1 {
+    position: absolute;
     bottom: 0;
-    font-size: 4.5em;
+    left: 90px;
+    font-size: 5.5em;
     color: #fff;
-        vertical-align: bottom;
+    vertical-align: bottom;
 }
 
 header h3 {
+    text-align: right;
     font-family: 'Vollkorn', serif;
     font-size: .9em;
     color: #fcfebf;
     margin: 25px 10px 15px 0px;
     float: left;
+    position: absolute;
+    bottom: 0;
 }
 
 footer {
@@ -165,7 +172,7 @@ li.hidden {
 /* timeline code from CSS Wizardry: http://twitter.com/csswizardry */
 
 #timeline{
-	background:url('http://dummyimage.com/3/FCFEBF/FCFEBF.gif') top center repeat-y;
+	background:url('http://dummyimage.com/3/E36651/E36651.gif') top center repeat-y;
 	width:820px;
 	padding:10px 0px 10px 0px;
 	margin:0 auto 50px auto;
@@ -196,7 +203,7 @@ li.hidden {
 #timeline li:before,
 #timeline li:after{
 	content:" ";
-	width:70px;
+	width:115px;
 	height:3px;
 	background:#f43059;
 	position:absolute;
