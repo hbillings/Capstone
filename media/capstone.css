@@ -63,12 +63,18 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
     font-size: 2em;
-    color: #E36651;
+    color: #FCFEBF;
     font-weight: bold;
 }
 
 h3 {
     font-size: 1.4em;
+    color: #E36651
+}
+
+a {
+    color: #E36651;
+    text-decoration: none;
 }
 
 header {
@@ -80,7 +86,7 @@ header {
 header h1 {
     position: absolute;
     bottom: 0;
-    left: 90px;
+    left: 100px;
     font-size: 5.5em;
     color: #fff;
     vertical-align: bottom;
@@ -158,23 +164,38 @@ footer li {
 
 /* Semester Detail Pages */
 
-li.hidden {
+.hidden {
     display:none;
 }
 
 #time {
     width: 200px;
     text-align: center;
-    margin: 40px auto 20px auto;
+    margin: 20px 0px 10px 0px;
+    float: right;
 }
 
+.description {
+    background: #eee;
+    border: solid 1px #FCFEBF;
+    margin-top: 72px;
+    padding: 15px;
+    width: 450px;
+    float: left;
+    -moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	-moz-box-shadow:0 1px #fff inset;
+	-webkit-box-shadow:0 1px #fff inset;
+	box-shadow:0 1px #fff inset;
+}
 
 /* timeline code from CSS Wizardry: http://twitter.com/csswizardry */
 
 #timeline{
-	background:url('http://dummyimage.com/3/E36651/E36651.gif') top center repeat-y;
+	background:url('http://dummyimage.com/3/FCFEBF/FCFEBF.gif') top right repeat-y;
 	width:820px;
-	padding:10px 0px 10px 0px;
+	padding:0px 0px 0px 0px;
 	margin:0 auto 50px auto;
 	overflow:hidden;
 	list-style:none;
@@ -182,15 +203,15 @@ li.hidden {
 }
 
 #timeline li{
+    clear: right;
 	position:relative;
-	clear:both;
-	float:left;
+	float:right;
 	width:275px;
 	padding:10px;
 	background:#eee;
 	border:1px solid #FCFEBF;
 	text-align:right;
-	margin:0 0 10px 0;
+	margin:10px 0 0 0;
 	
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
@@ -211,19 +232,4 @@ li.hidden {
 	top:50%;
 	background:-moz-linear-gradient(0,#FCFEBF,#FCFEBF);
 	background:-webkit-gradient(linear,left top,right top,from(#FCFEBF),to(#E36651));
-}
-
- #timeline li:nth-of-type(odd),
-#timeline li:nth-of-type(even){
-	margin:-10px 0 0 0;
-}
-#timeline li:nth-of-type(even){
-	float:right;
-	text-align:left;
-}
-#timeline li:nth-of-type(even):after{
-	background:-moz-linear-gradient(0,#FCFEBF,#FCFEBF);
-	background:-webkit-gradient(linear,left top,right top,from(#E36651),to(#FCFEBF));
-	left:auto;
-	right:100%;
 }
