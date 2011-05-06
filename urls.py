@@ -31,8 +31,13 @@ urlpatterns = patterns('',
 	            'template_name' : 'semester_detail.html',
 	            'template_object_name' : 'semester',
 	        },
-	        'semester',
-	),
+	        'semester',),
+	(r'^u/media/(.*)$', 'django.views.static.serve', 
+	        {
+	            'document_root': os.path.join(settings.PROJECT_PATH, 'media/images/users')
+	        }, 
+	        'images'),
+	        
     # Uncomment the admin/doc line below to enable admin documentation:
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^files/(.*)$', 'django.views.static.serve', 

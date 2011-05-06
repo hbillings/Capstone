@@ -16,6 +16,8 @@ class Activity(models.Model):
     semester = models.ForeignKey(Semester)
     description = models.TextField()
     link = models.URLField(verify_exists=False, max_length=200)
+    image = models.ImageField(upload_to='semester_cal', blank=True, null=True)
+    tease = models.TextField(null=True,)
     slug = models.SlugField(unique=True)
     
     def __unicode__(self):
@@ -24,4 +26,3 @@ class Activity(models.Model):
         
     class Meta:
         verbose_name_plural = "activities"
-    

@@ -69,7 +69,7 @@ h2 {
 
 h3 {
     font-size: 1.4em;
-    color: #E36651
+    color: #E36651;
 }
 
 a {
@@ -108,7 +108,7 @@ footer {
     text-align: center;
     bottom: -50;
     padding: 10px;
-    height: 100px;
+    height: 140px;
     clear: both;
 }
 
@@ -162,6 +162,103 @@ footer li {
     font-weight: 600;
 }
 
+/* Semester Base Page */
+
+#chart_holder {
+    position: relative;
+    top: 300px;
+    width: 800px;
+    height: 140px;
+    margin: 10px 0px 0px 40px;
+    opacity: 0.70;
+	padding:10px;
+	background:#eee;
+	border:1px solid #FCFEBF;
+}
+
+#chart_holder_page {
+    position: relative;
+    float: right;
+    clear: both;
+    width: 800px;
+    height: 140px;
+    margin: 10px 0px 0px 40px;
+	padding:10px;
+
+}
+
+
+#chart_holder p, #chart_holder_page p {
+    margin: 10px;
+    color: #444;
+    font-style: italic;
+    text-align: left;
+}
+
+#chart1 {
+    position: absolute; 
+    width: 760px;
+    height: 100px;
+    margin: 50px 0px 20px 20px;
+    bottom: 0;
+    z-index: -5;
+}
+
+#marker1 {
+    position: absolute; 
+    top: 70px; 
+    left: 45px; 
+    background: url('images/coffee.png'); 
+    width: 50px; 
+    height: 50px; 
+    z-index: 5;
+}
+
+#marker2 {
+    position: absolute; 
+    top: 60px; 
+    left: 240px; 
+    background: url('images/coffee.png'); 
+    width: 50px; 
+    height: 50px; 
+    z-index: 5;
+}
+
+#marker3 {
+    position: absolute; 
+    top: 45px; 
+    left: 430px; 
+    background: url('images/coffee.png'); 
+    width: 50px; 
+    height: 50px; 
+    z-index: 5;
+}
+
+#marker4 {
+    position: absolute; 
+    top: 20px; 
+    left: 535px; 
+    background: url('images/coffee.png'); 
+    width: 50px; 
+    height: 50px; 
+    z-index: 5;
+}
+
+#marker5 {
+    position: absolute; 
+    top: 50px; 
+    left: 730px; 
+    background: url('images/coffee.png'); 
+    width: 50px; 
+    height: 50px; 
+    z-index: 5;
+}
+#marker1 a, #marker2 a, #marker3 a, #marker4 a, #marker5 a {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
 /* Semester Detail Pages */
 
 .hidden {
@@ -185,11 +282,30 @@ footer li {
     -moz-border-radius:2px;
 	-webkit-border-radius:2px;
 	border-radius:2px;
-	-moz-box-shadow:0 1px #fff inset;
-	-webkit-box-shadow:0 1px #fff inset;
-	box-shadow:0 1px #fff inset;
+	-moz-box-shadow:0 5px #FCFEBF inset;
+	-webkit-box-shadow:0 5px #FCFEBF inset;
+	box-shadow:0 5px #FCFEBF inset;
 }
 
+li p {
+    color: #999;
+    padding: 0px;
+    line-height: 1.2em;
+    margin: 8px 0px 0px 0px;
+    font-size: .9em;
+}
+
+.description p {
+    line-height: 1.3em;
+}
+
+.description img {
+    margin-top: 20px;
+}
+
+#timeline li:hover {
+    opacity: 1;
+}
 /* timeline code from CSS Wizardry: http://twitter.com/csswizardry */
 
 #timeline{
@@ -203,6 +319,7 @@ footer li {
 }
 
 #timeline li{
+    opacity: 0.70;
     clear: right;
 	position:relative;
 	float:right;
@@ -216,9 +333,9 @@ footer li {
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
 	border-radius:2px;
-	-moz-box-shadow:0 1px #fff inset;
-	-webkit-box-shadow:0 1px #fff inset;
-	box-shadow:0 1px #fff inset;
+	-moz-box-shadow:0 3px #FCFEBF inset;
+	-webkit-box-shadow:0 3px #FCFEBF inset;
+	box-shadow:0 3px #FCFEBF inset;
 }
 
 #timeline li:before,

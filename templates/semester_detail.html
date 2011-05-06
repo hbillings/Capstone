@@ -1,4 +1,50 @@
 {% extends "base.html" %}
+{% block head_includes %}
+	<script language="javascript" type="text/javascript">
+
+	function editit(str, si, pi, plot) {
+	}
+
+	
+	$(document).ready(function(){
+			  $.jqplot.config.enablePlugins = true;
+			coffee = [1,1.5,2,3,2,]
+		   s1 = [['25-Aug-2009',coffee[0]],['12-Jan-2010',coffee[1]],['1-June-2010',coffee[2]],['25-Aug-2010',coffee[3]],['12-Jan-2011',coffee[4]],];
+
+		   plot1 = $.jqplot('chart1',[s1],{
+		       axes: {
+		           xaxis: {
+						renderer: $.jqplot.DateAxisRenderer,
+		               tickOptions: {
+		                   formatString: '%b %#d, %Y'
+		               },
+		               numberTicks: 5
+		           },
+		           yaxis: {
+		               tickOptions: {
+		                   show: false,
+		               }
+		           },
+		       },	
+
+				grid: {
+					background: 'transparent',
+					borderColor: 'transparent',
+				},
+
+
+		       cursor: {
+		           show: false,
+		           zoom: true
+		       },
+			seriesDefaults : {
+				color: '#E36651',
+			}
+		   });
+	});
+	</script>
+
+{% endblock %}
 {% block head %}
 
 
@@ -15,19 +61,28 @@
 	<div id="time"><h2>{{ semester }}</h2></div>
 	{% for activity in semester.activity_set.all %}
 			<li><h3 class="toggle" id="{{ activity.slug }}">{{ activity.name }}</h3>
-				{{ activity.description }}
+				<p>{{ activity.tease }}</p>
 			</li>
 			<script type="text/javascript">
 				$('h3#{{ activity.slug }}').click(function(){
 					$('div.description').slideToggle('hidden');
 					$('div.description').empty();
-					$('div.description').append('{{ activity.description }}');
+					$('div.description').append('<h2><a href="{{ activity.link }}">{{ activity.name }}</a></h2><a href="{{ activity.link }}"><img src="../../u/media/{{ activity.image }}" width="450"></a><p>{{ activity.description }}</p>');
 				});
 			</script>
 	{% endfor %}
 </ol>
 {% endblock %}
 {% block menu %}
-
+<div id="chart_holder_page">
+	<p>More coffee?</p>
+	<div id="chart1" class="plot">
+	</div>
+	<div id="marker1"><a href="/calendar/1/"></a></div>
+	<div id="marker2"><a href="/calendar/2/"></a></div>
+	<div id="marker3"><a href="/calendar/3/"></a></div>
+	<div id="marker4"><a href="/calendar/4/"></a></div>
+	<div id="marker5"><a href="/calendar/5/"></a></div>
+</div>
 
 {% endblock %}

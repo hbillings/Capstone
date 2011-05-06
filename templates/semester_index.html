@@ -1,38 +1,24 @@
 {% extends "base.html" %}
+
+{% block head %}
+
+
+	<h3>"Sometimes <br>I sleep. <br>Sometimes <br>it's not <br>for days."<br>(Bon Jovi)</h3>
+	<h1>waiting for <span style="color: #FCFEBF;">dawn</span></h1>
+		
+{% endblock %}
 {% block content %}
-<!--<ol id="timeline">
-
-  <li>
-    <h3>Projects</h3>
-    <ul>
-		<li>a website I did</li>
-		<li>an interactive I made</li>
-	</ul>
-  </li>
-
-  <li>
-    <h3>Classes</h3
-    <ul>
-		<li>some bullshit I got graded on</li>
-	</ul>
-  </li>
-
-  <li>
-    <h3>Extracurricular</h3>
-    <ul>
-		<li>a conference I went to</li>
-	</ul>
-  </li>
-
-  <li>
-    <h3>Lessons Learned</h3>
-    <ul>
-		<li>I drank too much coffee</li>
-		<li>Flash is sometimes the answer</li>
-	</ul>
-  </li>
-</ol>-->
+<p>You'll some coffee. How much would you like?</p>
+<div id="chart_holder">
+	<div id="chart1" class="plot" style="width:800px;height:100px;">
+	</div>
+	<div id="marker1"><a href="/calendar/1/"></a></div>
+	<div id="marker2"><a href="/calendar/2/"></a></div>
+	<div id="marker3"><a href="/calendar/3/"></a></div>
+	<div id="marker4"><a href="/calendar/4/"></a></div>
+	<div id="marker5"><a href="/calendar/5/"></a></div>
+</div>
 {% endblock %}
 {% block menu %}
-<div id="chart1" class="plot" style="width:800px;height:100px;"></div>
+
 {% endblock %}

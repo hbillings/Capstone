@@ -1,9 +1,70 @@
 {% extends "base.html" %}
+{% block head_includes %}
+	<script language="javascript" type="text/javascript">
+
+	function editit(str, si, pi, plot) {
+	}
+
+	
+	$(document).ready(function(){
+		$('a#coffee').click(function(){
+			$('div#chart_holder').slideToggle('hidden');
+			  $.jqplot.config.enablePlugins = true;
+			coffee = [1,1.5,2,3,2,]
+		   s1 = [['25-Aug-2009',coffee[0]],['12-Jan-2010',coffee[1]],['1-June-2010',coffee[2]],['25-Aug-2010',coffee[3]],['12-Jan-2011',coffee[4]],];
+
+		   plot1 = $.jqplot('chart1',[s1],{
+		       axes: {
+		           xaxis: {
+						renderer: $.jqplot.DateAxisRenderer,
+		               tickOptions: {
+		                   formatString: '%b %#d, %Y'
+		               },
+		               numberTicks: 5
+		           },
+		           yaxis: {
+		               tickOptions: {
+		                   show: false,
+		               }
+		           },
+		       },	
+
+				grid: {
+					background: 'transparent',
+					borderColor: 'transparent',
+				},
+
+
+		       cursor: {
+		           show: false,
+		           zoom: true
+		       },
+			seriesDefaults : {
+				color: '#E36651',
+			}
+		   });
+		});
+	});
+	</script>
+
+{% endblock %}
 {% block intro %}
 	<h3>"How do people<br>go to sleep?<br>I'm afraid<br>I've lost<br>the knack." <br>(Dorothy Parker)</h3>
 	<h1>waiting for <span style="color: #fcfebf;">dawn</span></h1>
 	<div id="snooze_button">
-		<p><a href="/calendar/">[greet the day]</a><a href="lightboxed-redeyes-video">[hit 'snooze']</a></p>
+		<p><a id="coffee" href="#">[greet the day]</a><a href="lightboxed-redeyes-video">[hit 'snooze']</a></p>
+	</div>
+{% endblock %}
+{% block content %}
+	<div id="chart_holder" class="hidden">
+		<p>You'll need coffee to keep up with me. How much would you like?</p>
+		<div id="chart1" class="plot">
+		</div>
+		<div id="marker1"><a href="/calendar/1/"></a></div>
+		<div id="marker2"><a href="/calendar/2/"></a></div>
+		<div id="marker3"><a href="/calendar/3/"></a></div>
+		<div id="marker4"><a href="/calendar/4/"></a></div>
+		<div id="marker5"><a href="/calendar/5/"></a></div>
 	</div>
 {% endblock %}
 <!--I put a piece of paper under my pillow, and when I could not sleep I wrote in the dark.
